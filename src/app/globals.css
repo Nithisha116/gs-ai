@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fefeff;
+  --foreground: #14121f;
+
+  --color-surface: #ffffff;
+  --color-surface-soft: #f7f6ff;
+  --color-surface-lavender: #f5f4ff;
+  --color-surface-mist: #ece8ff;
+
+  --color-accent: #6d28ff;
+  --color-accent-soft: #8b5cf6;
+  --color-accent-deep: #4c1fb8;
+
+  --color-ink: #14121f;
+  --color-ink-soft: #57536b;
+  --color-ink-faint: #8b87a0;
+
+  --color-line: rgba(20, 18, 31, 0.08);
+  --color-line-soft: rgba(20, 18, 31, 0.05);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--color-surface);
+  --color-surface-soft: var(--color-surface-soft);
+  --color-surface-lavender: var(--color-surface-lavender);
+  --color-surface-mist: var(--color-surface-mist);
+
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-deep: var(--color-accent-deep);
+
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-faint: var(--color-ink-faint);
+
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+
+  --animate-blob-a: blob-a 22s ease-in-out infinite;
+  --animate-blob-b: blob-b 26s ease-in-out infinite;
+  --animate-blob-c: blob-c 30s ease-in-out infinite;
+  --animate-drift: drift 40s linear infinite;
+  --animate-marquee: marquee 34s linear infinite;
+
+  --shadow-nav: 0 8px 30px rgba(20, 18, 31, 0.06), 0 2px 8px rgba(20, 18, 31, 0.04);
+  --shadow-card: 0 1px 2px rgba(20, 18, 31, 0.04), 0 12px 32px -12px rgba(20, 18, 31, 0.12);
+  --shadow-card-hover: 0 1px 2px rgba(20, 18, 31, 0.04), 0 24px 48px -16px rgba(109, 40, 255, 0.22);
+  --shadow-menu: 0 24px 64px -20px rgba(20, 18, 31, 0.22), 0 8px 24px -8px rgba(109, 40, 255, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-body), ui-sans-serif, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes blob-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(4%, 6%) scale(1.08); }
+  66% { transform: translate(-3%, -4%) scale(0.96); }
+}
+
+@keyframes blob-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-6%, 4%) scale(1.1); }
+  70% { transform: translate(5%, -5%) scale(0.94); }
+}
+
+@keyframes blob-c {
+  0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  50% { transform: translate(-48%, -53%) scale(1.06) rotate(8deg); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-2%) translateY(1%); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
