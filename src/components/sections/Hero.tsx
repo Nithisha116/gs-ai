@@ -1,15 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import LiquidGlassBackground from "@/components/backgrounds/LiquidGlassBackground";
+import HeroVideoBackground from "@/components/backgrounds/HeroVideoBackground";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-44 pb-28 lg:pt-52 lg:pb-36">
-      <LiquidGlassBackground />
+      <HeroVideoBackground />
 
       <Container className="relative">
         <motion.div
