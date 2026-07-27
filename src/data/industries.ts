@@ -14,6 +14,7 @@ export type Industry = {
     | "scale"
     | "hard-hat"
     | "concierge-bell";
+  image?: string;
   tagline: string;
   heroDescription: string;
   painPoints: string[];
@@ -34,6 +35,7 @@ export const industries: Industry[] = [
     slug: "saas",
     name: "SaaS",
     icon: "cloud",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate the operations behind growth.",
     heroDescription:
       "From lead routing to churn signals, we automate the operational layer that lets a SaaS company scale revenue without scaling headcount linearly.",
@@ -72,6 +74,7 @@ export const industries: Industry[] = [
     slug: "healthcare",
     name: "Healthcare",
     icon: "heart-pulse",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate administration, protect the patient experience.",
     heroDescription:
       "We automate the administrative burden in healthcare operations — scheduling, intake, billing — so clinical teams spend time on patients, not paperwork.",
@@ -110,6 +113,7 @@ export const industries: Industry[] = [
     slug: "finance",
     name: "Finance",
     icon: "landmark",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate compliance-heavy operations, safely.",
     heroDescription:
       "We automate the reconciliation, reporting, and compliance workflows that consume financial teams' time — with the audit trail regulators expect.",
@@ -148,6 +152,7 @@ export const industries: Industry[] = [
     slug: "real-estate",
     name: "Real Estate",
     icon: "building-2",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate leasing, documents, and portfolio operations.",
     heroDescription:
       "We automate lease administration, document processing, and portfolio reporting so real estate teams manage more assets without more headcount.",
@@ -186,6 +191,7 @@ export const industries: Industry[] = [
     slug: "logistics",
     name: "Logistics",
     icon: "truck",
+    image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate dispatch, tracking, and back-office operations.",
     heroDescription:
       "We automate dispatch, tracking, and billing workflows across fragmented logistics systems, cutting manual coordination out of day-to-day operations.",
@@ -224,6 +230,7 @@ export const industries: Industry[] = [
     slug: "manufacturing",
     name: "Manufacturing",
     icon: "factory",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate production data and supply chain coordination.",
     heroDescription:
       "We connect shop floor, ERP, and supply chain systems so manufacturing operations run on synchronized data instead of manual reconciliation.",
@@ -262,6 +269,7 @@ export const industries: Industry[] = [
     slug: "agencies",
     name: "Agencies",
     icon: "megaphone",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate client reporting and delivery operations.",
     heroDescription:
       "We automate client reporting, project handoffs, and delivery operations so agencies scale account volume without scaling account management headcount.",
@@ -300,6 +308,7 @@ export const industries: Industry[] = [
     slug: "education",
     name: "Education",
     icon: "graduation-cap",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate admissions, advising, and administration.",
     heroDescription:
       "We automate admissions processing, student communications, and administrative workflows so institutions serve more students without more back-office strain.",

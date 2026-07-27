@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Icon from "@/components/ui/Icon";
@@ -23,17 +25,41 @@ export default function IndustriesShowcase() {
           </Button>
         </div>
 
-        <Stagger className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <Stagger className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((industry) => (
             <StaggerItem key={industry.slug}>
               <Link
                 href={`/industries/${industry.slug}`}
-                className="group flex items-center gap-3 rounded-2xl border border-line-soft bg-white px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-card"
+                className="group block overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-card-hover"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-surface-soft text-ink transition-colors duration-300 group-hover:bg-accent group-hover:text-white">
-                  <Icon name={industry.icon} className="size-4.5" />
-                </span>
-                <span className="font-medium text-ink">{industry.name}</span>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  {industry.image ? (
+                    <Image
+                      src={industry.image}
+                      alt={industry.name}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-surface-lavender to-surface-mist" />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-black/0 opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
+
+                  <span className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-full bg-white/90 text-ink shadow-sm backdrop-blur-sm">
+                    <Icon name={industry.icon} className="size-4.5" />
+                  </span>
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="font-display text-lg font-semibold text-ink">{industry.name}</h3>
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-surface-soft text-ink transition-all duration-300 group-hover:rotate-45 group-hover:bg-accent group-hover:text-white">
+                      <ArrowUpRight className="size-4" />
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{industry.tagline}</p>
+                </div>
               </Link>
             </StaggerItem>
           ))}

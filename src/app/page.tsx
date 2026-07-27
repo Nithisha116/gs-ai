@@ -29,7 +29,7 @@ export default function Home() {
         description="Straight answers to what enterprises ask before their first engagement."
         items={homeFaqs}
       />
-      <CTASection />
+      <CTASection variant="premium" />
     </>
   );
 }
