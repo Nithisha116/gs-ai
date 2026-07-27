@@ -92,6 +92,7 @@ export const articles: Article[] = [
 export type CaseStudy = {
   slug: string;
   client: string;
+  logoName: string;
   industry: string;
   serviceSlug: string;
   title: string;
@@ -100,6 +101,7 @@ export type CaseStudy = {
   metricLabel: string;
   challenge: string;
   solution: string;
+  outcome: string;
   results: string[];
   quote: { text: string; author: string; role: string };
 };
@@ -108,6 +110,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "regional-logistics-dispatch-automation",
     client: "A regional logistics operator",
+    logoName: "RouteOne",
     industry: "Logistics",
     serviceSlug: "ai-workflow-automation",
     title: "Cutting a five-step dispatch process down to one review step",
@@ -123,6 +126,8 @@ export const caseStudies: CaseStudy[] = [
       "Invoicing cycle time cut from two weeks to two days.",
       "Manual data entry errors eliminated from the dispatch-to-invoice path.",
     ],
+    outcome:
+      "Dispatch and invoicing now run as one connected workflow, with a single review step instead of five manual hand-offs.",
     quote: {
       text: "We didn't need more dispatchers. We needed the five tools we already had to talk to each other.",
       author: "Operations Director",
@@ -132,6 +137,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "saas-support-agent-deployment",
     client: "A B2B SaaS support organization",
+    logoName: "CloudFrame",
     industry: "SaaS",
     serviceSlug: "ai-agents",
     title: "An agent that resolves 58% of tickets without a human touch",
@@ -147,6 +153,8 @@ export const caseStudies: CaseStudy[] = [
       "First response time dropped from hours to seconds.",
       "Remaining tickets arrive at agents pre-triaged with a suggested resolution.",
     ],
+    outcome:
+      "Support scales sub-linearly now — the agent resolves most tickets end-to-end and hands off the rest with full context attached.",
     quote: {
       text: "The agent doesn't just answer questions — it actually finishes the job. That was the difference versus every chatbot we'd tried before.",
       author: "VP of Customer Experience",
@@ -156,6 +164,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "financial-services-kyc-automation",
     client: "A mid-market wealth management firm",
+    logoName: "Finstack Group",
     industry: "Finance",
     serviceSlug: "business-process-automation",
     title: "4.2x faster client onboarding without cutting compliance corners",
@@ -171,6 +180,8 @@ export const caseStudies: CaseStudy[] = [
       "100% of onboarding decisions now carry a complete audit trail.",
       "Reviewer time reallocated from document chasing to actual review.",
     ],
+    outcome:
+      "Onboarding is faster and fully auditable at the same time, with every decision logged for compliance review.",
     quote: {
       text: "Compliance got faster and more defensible at the same time. We weren't expecting both.",
       author: "Head of Compliance",
@@ -180,6 +191,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "retail-inventory-sync",
     client: "A multi-brand retail group",
+    logoName: "NorthBridge",
     industry: "Retail",
     serviceSlug: "data-orchestration",
     title: "Six systems, one accurate inventory number",
@@ -195,6 +207,8 @@ export const caseStudies: CaseStudy[] = [
       "Manual reconciliation work eliminated from the weekly operating cycle.",
       "Overselling incidents dropped to near zero.",
     ],
+    outcome:
+      "Every team now works from the same real-time inventory number, with reconciliation work removed from the weekly cycle.",
     quote: {
       text: "For the first time, every team is looking at the same number.",
       author: "COO",
@@ -204,6 +218,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "real-estate-lease-abstraction",
     client: "A commercial real estate firm",
+    logoName: "Atlas Property",
     industry: "Real Estate",
     serviceSlug: "document-processing",
     title: "Lease abstraction from three weeks to three days",
@@ -219,6 +234,8 @@ export const caseStudies: CaseStudy[] = [
       "Abstraction turnaround cut from three weeks to three days.",
       "Portfolio team redeployed from manual review to lease strategy.",
     ],
+    outcome:
+      "A portfolio that existed only as scanned PDFs is now structured, searchable data the team can act on directly.",
     quote: {
       text: "We finally have structured data on a portfolio that existed only as filing cabinets full of PDFs.",
       author: "VP of Asset Management",
@@ -228,6 +245,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "manufacturing-erp-integration",
     client: "A national manufacturing company",
+    logoName: "Solstice Industrial",
     industry: "Manufacturing",
     serviceSlug: "erp-integration",
     title: "Connecting a legacy ERP to a modern operating stack",
@@ -243,6 +261,8 @@ export const caseStudies: CaseStudy[] = [
       "Order-to-fulfillment cycle time reduced significantly.",
       "Finance and operations now report from the same live data.",
     ],
+    outcome:
+      "Three manual data-entry roles were eliminated, with finance and operations finally reporting from the same live numbers.",
     quote: {
       text: "We assumed our ERP was too old to integrate with anything modern. That assumption cost us years.",
       author: "VP of Operations",

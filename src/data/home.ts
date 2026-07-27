@@ -36,21 +36,6 @@ export const homeTestimonials = [
   },
 ];
 
-export const techStack = [
-  "Claude",
-  "GPT-4",
-  "n8n",
-  "Zapier",
-  "Salesforce",
-  "HubSpot",
-  "Snowflake",
-  "AWS",
-  "Azure",
-  "MuleSoft",
-  "LangGraph",
-  "Airbyte",
-];
-
 export const homeFaqs = [
   { q: "How long does a typical engagement take?", a: "Most first automations reach production in 4–7 weeks, from discovery through deployment. Larger integration projects run longer, scoped in phases so you see value early." },
   { q: "Do we need an in-house technical team to work with you?", a: "No. We handle the build and deployment end to end, and train your team to operate what we ship. A technical stakeholder helps, but isn't required." },
