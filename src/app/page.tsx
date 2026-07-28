@@ -4,12 +4,10 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 import WorkflowProcess from "@/components/sections/WorkflowProcess";
 import IndustriesShowcase from "@/components/sections/IndustriesShowcase";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
-import AutomationExamples from "@/components/sections/AutomationExamples";
-import Stats from "@/components/sections/Stats";
 import Testimonials from "@/components/sections/Testimonials";
 import TechStack from "@/components/sections/TechStack";
+import DiscoveryCallSection from "@/components/sections/DiscoveryCallSection";
 import FAQSection from "@/components/sections/FAQSection";
-import CTASection from "@/components/sections/CTASection";
 import { homeFaqs } from "@/data/home";
 
 export default function Home() {
@@ -21,15 +19,13 @@ export default function Home() {
       <WorkflowProcess />
       <IndustriesShowcase />
       <CaseStudiesSection />
-      <AutomationExamples />
-      <Stats />
       <Testimonials />
       <TechStack />
+      <DiscoveryCallSection />
       <FAQSection
         description="Straight answers to what enterprises ask before their first engagement."
         items={homeFaqs}
       />
-      <CTASection variant="premium" />
     </>
   );
 }

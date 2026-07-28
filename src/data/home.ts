@@ -6,13 +6,6 @@ export const trustedCompanies = [
   "NorthBridge",
 ];
 
-export const homeStats = [
-  { value: "120+", label: "automations shipped to production" },
-  { value: "4.2x", label: "average process speed improvement" },
-  { value: "31 hrs", label: "average weekly time saved per engagement" },
-  { value: "98%", label: "client retention past year one" },
-];
-
 export const homeTestimonials = [
   {
     quote: "GrowSpark didn't sell us a platform. They automated the actual process, on the tools we already had, in six weeks.",
@@ -34,6 +27,16 @@ export const homeTestimonials = [
     author: "COO",
     role: "Multi-brand Retail Group",
   },
+  {
+    quote: "We finally have structured data on a portfolio that existed only as filing cabinets full of PDFs.",
+    author: "VP of Asset Management",
+    role: "Commercial Real Estate Firm",
+  },
+  {
+    quote: "We assumed our ERP was too old to integrate with anything modern. That assumption cost us years.",
+    author: "VP of Operations",
+    role: "National Manufacturing Company",
+  },
 ];
 
 export const homeFaqs = [
@@ -51,13 +54,4 @@ export const workflowProcess = [
   { title: "Build", description: "Engineering ships in weekly increments — working software, not slide decks." },
   { title: "Deploy", description: "We roll out with monitoring, alerting, and a rollback plan in place." },
   { title: "Optimize", description: "We keep tuning after launch so every automation improves over time." },
-];
-
-export const automationExamples = [
-  { title: "Dispatch-to-invoice automation", industry: "Logistics", description: "A five-step manual workflow reduced to a single review checkpoint across four systems." },
-  { title: "Autonomous ticket resolution", industry: "SaaS", description: "An agent that reads, decides, and resolves the majority of support tickets without a human touch." },
-  { title: "Compliance document automation", industry: "Finance", description: "Document intake, validation, and routing for a five-department onboarding process." },
-  { title: "Real-time inventory sync", industry: "Retail", description: "Six systems kept in sync automatically, eliminating a weekly manual reconciliation." },
-  { title: "Lease abstraction pipeline", industry: "Real Estate", description: "Thousands of legacy lease documents processed into structured, searchable data." },
-  { title: "Legacy ERP integration", industry: "Manufacturing", description: "A decades-old SAP instance connected to a modern CRM and reporting stack." },
 ];

@@ -33,8 +33,8 @@ export default function Hero() {
             <Button href="/contact" size="lg">
               Book a discovery call
             </Button>
-            <Button href="#automation-examples" size="lg" variant="secondary" icon={false}>
-              View automation examples
+            <Button href="/resources/case-studies" size="lg" variant="secondary" icon={false}>
+              See case studies
             </Button>
           </div>
 
