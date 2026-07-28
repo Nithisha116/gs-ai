@@ -120,3 +120,95 @@ h1, h2, h3, h4, h5, h6 {
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─────────────────────────────────────────────────────────────
+   AIFusionX service-page design tokens
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --afx-lavender: #dce1ff;
+  --afx-lavender-top: #e6e1ff;
+  --afx-cream: #faf9f7;
+  --afx-purple: #6904f2;
+  --afx-mist: #edeaf2;
+  --afx-hairline: rgba(0, 0, 0, 0.1);
+  --afx-hairline-soft: rgba(0, 0, 0, 0.07);
+  --afx-muted: rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-afx-lavender: var(--afx-lavender);
+  --color-afx-lavender-top: var(--afx-lavender-top);
+  --color-afx-cream: var(--afx-cream);
+  --color-afx-purple: var(--afx-purple);
+  --color-afx-mist: var(--afx-mist);
+  --color-afx-hairline: var(--afx-hairline);
+  --color-afx-muted: var(--afx-muted);
+
+  --font-afx: var(--font-instrument);
+  --font-afx-label: var(--font-plex);
+}
+
+/* Page scope: the theme runs on Instrument Sans with no display-font tracking. */
+.afx {
+  font-family: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  color: #000;
+}
+
+.afx h1,
+.afx h2,
+.afx h3,
+.afx h4,
+.afx h5,
+.afx h6 {
+  font-family: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+.afx-eyebrow {
+  font-family: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Concave ("notch") corner pieces. Each element is painted in the OUTER
+   colour and masks away a quarter circle, so the adjacent block reads as
+   having a rounded corner that bleeds into its neighbour. */
+.afx-notch {
+  position: absolute;
+  width: var(--afx-notch-size, 40px);
+  height: var(--afx-notch-size, 40px);
+  pointer-events: none;
+}
+
+.afx-notch-tl {
+  -webkit-mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 100% 100%, transparent 98%, #000 100%);
+  mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 100% 100%, transparent 98%, #000 100%);
+}
+
+.afx-notch-tr {
+  -webkit-mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 0 100%, transparent 98%, #000 100%);
+  mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 0 100%, transparent 98%, #000 100%);
+}
+
+.afx-notch-bl {
+  -webkit-mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 100% 0, transparent 98%, #000 100%);
+  mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 100% 0, transparent 98%, #000 100%);
+}
+
+.afx-notch-br {
+  -webkit-mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 0 0, transparent 98%, #000 100%);
+  mask-image: radial-gradient(circle var(--afx-notch-size, 40px) at 0 0, transparent 98%, #000 100%);
+}
+
+.afx-scroll-x {
+  scroll-snap-type: x mandatory;
+}
+
+.afx-scroll-x > * {
+  scroll-snap-align: start;
+}

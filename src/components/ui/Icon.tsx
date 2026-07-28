@@ -25,6 +25,8 @@ import {
   Scale,
   HardHat,
   ConciergeBell,
+  AlertTriangle,
+  UserCheck,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -56,6 +58,8 @@ const icons: Record<string, LucideIcon> = {
   scale: Scale,
   "hard-hat": HardHat,
   "concierge-bell": ConciergeBell,
+  "alert-triangle": AlertTriangle,
+  "user-check": UserCheck,
 };
 
 export default function Icon({ name, className }: { name: string; className?: string }) {
