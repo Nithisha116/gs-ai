@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import TrustedCompanies from "@/components/sections/TrustedCompanies";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import AutomationExamples from "@/components/sections/AutomationExamples";
 import WorkflowProcess from "@/components/sections/WorkflowProcess";
 import IndustriesShowcase from "@/components/sections/IndustriesShowcase";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <TrustedCompanies />
       <ServicesGrid />
+      <AutomationExamples />
       <WorkflowProcess />
       <IndustriesShowcase />
       <CaseStudiesSection />
