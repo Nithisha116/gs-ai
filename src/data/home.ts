@@ -1,11 +1,3 @@
-export const trustedCompanies = [
-  "CloudFrame",
-  "Atlas Property",
-  "Finstack Group",
-  "RouteOne",
-  "NorthBridge",
-];
-
 export const homeTestimonials = [
   {
     quote: "GrowSpark didn't sell us a platform. They automated the actual process, on the tools we already had, in six weeks.",

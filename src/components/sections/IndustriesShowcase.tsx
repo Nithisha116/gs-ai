@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback,useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -13,10 +13,10 @@ const featured = industries.slice(0, 8);
 
 export default function IndustriesShowcase() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    containScroll: "trimSnaps",
-  });
+  loop: true,
+  align: "start",
+  containScroll: "keepSnaps",
+});
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -70,34 +70,50 @@ export default function IndustriesShowcase() {
           tabIndex={0}
           onKeyDown={handleKeyDown}
         >
-          <div className="flex gap-6 px-6 lg:px-[max(24px,calc((100vw-1280px)/2+24px))]">
+          <div className="flex gap-5 px-6 lg:px-[max(24px,calc((100vw-1280px)/2+24px))]">
             {featured.map((industry) => (
               <Link
                 key={industry.slug}
                 href={`/industries/${industry.slug}`}
                 draggable={false}
                 onDragStart={(e) => e.preventDefault()}
-                className="group relative block h-[420px] w-[280px] shrink-0 select-none overflow-hidden rounded-[1.75rem] shadow-2xl transition-transform duration-500 ease-out hover:-translate-y-1.5 sm:h-[500px] sm:w-[340px] lg:h-[560px] lg:w-[360px]"
-              >
+                className="group relative
+shrink-0
+
+basis-full
+md:basis-full
+xl:basis-[calc((100%-60px)/4)]
+h-80
+md:h-96
+xl:h-[400px]
+
+overflow-hidden
+rounded-[1.75rem]
+shadow-2xl
+transition-transform
+duration-500
+ease-out
+hover:-translate-y-1.5"
+>
                 {industry.image ? (
                   <Image
                     src={industry.image}
                     alt={industry.name}
                     fill
                     draggable={false}
-                    sizes="(min-width: 1024px) 360px, (min-width: 640px) 340px, 280px"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(min-width:1280px) 25vw, 100vw"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-102"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-surface-lavender to-surface-mist" />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black/75" />
 
-                <div className="absolute inset-x-0 top-0 p-6">
+                <div className="absolute inset-x-0 top-0 p-5">
                   <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">{industry.name}</h3>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="absolute inset-x-0 bottom-0 p-5">
                   <p className="line-clamp-2 text-sm leading-relaxed text-white/80">{industry.tagline}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-white/90">
                     Learn more
@@ -123,9 +139,11 @@ export default function IndustriesShowcase() {
           <button
             type="button"
             onClick={scrollNext}
+            
             aria-label="Next industry"
             className="flex size-12 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5"
           >
+            
             <ArrowRight className="size-5" />
           </button>
         </div>
