@@ -301,7 +301,7 @@ export function detailFor(service: Service): ServiceDetail {
     },
     expertise: {
       eyebrow: "What's included",
-      title: ["What we typically", "walk into"],
+      title: ["The problem with", '"messy" internal tools'],
       paragraphs: [service.heroDescription, service.problems[0]],
       standardTitle: "Our standard",
       standards: [

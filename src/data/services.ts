@@ -100,18 +100,18 @@ export const services: Service[] = ([
     slug: "ai-agents",
     name: "AI Tools & Agents",
     icon: "bot",
-    tagline: "Build internal AI tools.",
+    tagline: "Build custom interfaces and AI assistants tailored to your specific workflows.",
     category: "AI",
     heroDescription:
-      "We build AI agents that take real actions inside your systems — reading, deciding, and executing tasks that used to require a person at the keyboard.",
+      "Most teams start with simple zaps that quickly spiral into unmanageable spaghetti code. When an API changes or a token expires, business-critical processes break silently.",
     benefits: [
-      { title: "Agents that finish the job", description: "Beyond answering questions, agents complete tasks: update records, send communications, trigger downstream steps." },
-      { title: "Grounded in your data", description: "Agents reason over your own documents, databases, and APIs — not generic public knowledge." },
-      { title: "Safe by design", description: "Permission scopes, approval gates, and audit trails are built in from day one." },
-      { title: "Composable across teams", description: "One agent framework can power support, sales, and operations use cases." },
+      { title: "Strategy", description: "Architectural alignment before implementation." },
+      { title: "Build", description: "Controlled deployment of automation infrastructure." },
+      { title: "Handoff", description: "Operational enablement and system ownership transfer." },
+      { title: "Support", description: "Ongoing performance governance and system optimization." },
     ],
     problems: [
-      "Skilled staff spend hours on tasks that are mostly pattern-matching.",
+      "We treat automation as software engineering. Every workflow is mapped, error-handled, and documented so your team isn’t dependent on a black box.",
       "Knowledge lives in a few people's heads instead of a system anyone can query.",
       "Off-the-shelf chatbots answer questions but can't actually do anything.",
       "Scaling a team linearly with ticket or request volume is unsustainable.",
@@ -120,8 +120,8 @@ export const services: Service[] = ([
     caseStudy: {
       client: "A B2B SaaS support org",
       industry: "SaaS",
-      metric: "58%",
-      metricLabel: "tickets auto-resolved",
+      metric: "20–40%",
+      metricLabel: "Reduction in manual workflow load",
       description:
         "We deployed an agent that reads tickets, queries billing and product data, and resolves common cases end-to-end without a human touch.",
     },
@@ -135,10 +135,10 @@ export const services: Service[] = ([
     slug: "support-automation",
     name: "Support Triage & Ticketing",
     icon: "life-buoy",
-    tagline: "Streamline support data.",
+    tagline: "Connect disconnected tools so data flows where you need it, when needed.",
     category: "Ops",
     heroDescription:
-      "We automate triage, routing, and resolution for support so your team handles the complex cases while routine ones resolve instantly.",
+      "Most teams start with simple zaps that quickly spiral into unmanageable spaghetti code. When an API changes or a token expires, business-critical processes break silently.",
     benefits: [
       { title: "Faster first response", description: "Tickets are triaged and routed the moment they arrive, 24/7." },
       { title: "Routine cases self-resolve", description: "Password resets, status checks, and FAQs are handled without an agent." },
@@ -146,7 +146,7 @@ export const services: Service[] = ([
       { title: "Agents handle what matters", description: "Complex, high-value cases get a human's full attention instead of triage time." },
     ],
     problems: [
-      "Support volume grows faster than the team can be hired.",
+      "We treat automation as software engineering. Every workflow is mapped, error-handled, and documented so your team isn’t dependent on a black box.",
       "The same routine questions get answered manually, over and over.",
       "Response times slip during peak hours or after-hours.",
       "Agent time is consumed by triage instead of resolution.",
@@ -170,10 +170,10 @@ export const services: Service[] = ([
     slug: "data-orchestration",
     name: "Data Orchestration",
     icon: "database",
-    tagline: "Automate data and reporting.",
+    tagline: "Automate data collection, transformation and enrichment for better insights.",
     category: "Data",
     heroDescription:
-      "We build the pipelines that move, clean, and sync data between your systems, so every team works from the same accurate source of truth.",
+      "Most teams start with simple zaps that quickly spiral into unmanageable spaghetti code. When an API changes or a token expires, business-critical processes break silently.",
     benefits: [
       { title: "One source of truth", description: "Systems stay in sync automatically instead of drifting apart over time." },
       { title: "Clean data by default", description: "Validation and deduplication run before bad data ever reaches a report." },
@@ -181,7 +181,7 @@ export const services: Service[] = ([
       { title: "Built to scale", description: "Architecture handles growth in data volume without a rebuild." },
     ],
     problems: [
-      "Different teams report different numbers for the same metric.",
+      "We treat automation as software engineering. Every workflow is mapped, error-handled, and documented so your team isn’t dependent on a black box.",
       "Manual exports and imports introduce errors and delays.",
       "Systems fall out of sync, and no one notices until it causes a problem.",
       "Engineering time is consumed maintaining brittle, ad-hoc scripts.",
@@ -190,8 +190,8 @@ export const services: Service[] = ([
     caseStudy: {
       client: "A multi-brand retail group",
       industry: "eCommerce",
-      metric: "99.8%",
-      metricLabel: "data sync accuracy",
+      metric: "20–40%",
+      metricLabel: "Reduction in manual workflow load",
       description:
         "We replaced a patchwork of manual exports with automated pipelines syncing inventory and sales data across six systems in near real time.",
     },
@@ -205,10 +205,10 @@ export const services: Service[] = ([
     slug: "system-integrations",
     name: "Systems Integration",
     icon: "network",
-    tagline: "Connect core business systems.",
+    tagline: "We connect CRM, ERP, support, and internal tools into a single automated workflow layer.",
     category: "Ops",
     heroDescription:
-      "We connect the fragmented systems behind your operations — legacy and modern — into a single, coherent layer that your team and your automations can rely on.",
+      "Most teams start with simple zaps that quickly spiral into unmanageable spaghetti code. When an API changes or a token expires, business-critical processes break silently.",
     benefits: [
       { title: "One operating layer", description: "Disparate systems act as one, without a costly full platform migration." },
       { title: "Legacy-friendly", description: "We work with older, on-premise, or heavily customized systems, not just modern SaaS." },
@@ -216,7 +216,7 @@ export const services: Service[] = ([
       { title: "Reduced operational risk", description: "Fewer manual hand-offs mean fewer opportunities for costly errors." },
     ],
     problems: [
-      "Years of tool adoption left systems that don't talk to each other.",
+      "We treat automation as software engineering. Every workflow is mapped, error-handled, and documented so your team isn’t dependent on a black box.",
       "Critical business logic is trapped in a legacy system nobody wants to touch.",
       "IT teams are stretched thin maintaining fragile point-to-point connections.",
       "New tools can't be adopted because integrating them looks too risky.",
@@ -224,9 +224,9 @@ export const services: Service[] = ([
     technologies: ["Enterprise service bus", "MuleSoft", "Kafka", "AWS", "Azure", "On-prem connectors"],
     caseStudy: {
       client: "A regional healthcare network",
-      industry: "Healthcare",
-      metric: "9 systems",
-      metricLabel: "unified into one layer",
+      industry: "Mid-market SaaS",
+      metric: "20–40%",
+      metricLabel: "Reduction in manual workflow load",
       description:
         "We integrated scheduling, billing, and records systems spanning two decades of tooling into a single coherent operating layer.",
     },
@@ -240,7 +240,7 @@ export const services: Service[] = ([
     slug: "reporting-automation",
     name: "Support & Monitoring",
     icon: "bar-chart-3",
-    tagline: "Monitor and improve systems.",
+    tagline: "Ongoing maintenance, optimization, and proactive monitoring for peace of mind.",
     category: "Data",
     heroDescription:
       "We automate the collection, calculation, and distribution of reports, so decision-makers get accurate numbers on schedule, without a manual pull-and-format process.",
@@ -259,9 +259,9 @@ export const services: Service[] = ([
     technologies: ["Looker", "Power BI", "Tableau", "dbt", "Snowflake", "Python", "Slack API"],
     caseStudy: {
       client: "A private equity-backed services group",
-      industry: "Finance",
-      metric: "40 hrs/mo",
-      metricLabel: "of manual reporting removed",
+      industry: "MID-MARKET SAAS",
+      metric: "20-40%",
+      metricLabel: "Reduction in manual workflow load",
       description:
         "We automated portfolio-company reporting roll-ups that previously took a two-person team most of a week each month.",
     },
