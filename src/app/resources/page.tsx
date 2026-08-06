@@ -6,11 +6,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import PageHero from "@/components/sections/PageHero";
 import CTASection from "@/components/sections/CTASection";
-import { articles, caseStudies, guides, downloads } from "@/data/resources";
+import { articles, caseStudies } from "@/data/resources";
 
 export const metadata: Metadata = {
   title: "Resources",
-  description: "Articles, case studies, guides, FAQs, and downloads on AI automation and consulting.",
+  description: "Articles, case studies, and FAQs on AI automation and consulting.",
 };
 
 export default function ResourcesIndexPage() {
@@ -19,7 +19,7 @@ export default function ResourcesIndexPage() {
       <PageHero
         eyebrow="Resources"
         title="Everything we've learned building automation, in one place."
-        description="Articles, guides, case studies, and templates — written by the team that ships the work."
+        description="Articles and case studies — written by the team that ships the work."
       />
 
       <section className="pb-24 lg:pb-32">
@@ -68,42 +68,13 @@ export default function ResourcesIndexPage() {
             </Stagger>
           </div>
 
-          <div>
-            <div className="flex items-end justify-between gap-6">
-              <SectionHeading eyebrow="Guides" title="In-depth guides for planning automation." />
-              <Link href="/resources/guides" className="hidden shrink-0 text-sm font-medium text-accent sm:block">
-                View all guides
-              </Link>
+          <Link href="/resources/faq" className="flex flex-col justify-between rounded-3xl bg-ink p-8 text-white transition-transform duration-300 hover:-translate-y-1">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-white/50">FAQ</span>
+              <h3 className="mt-3 font-display text-xl font-semibold">Answers to what we hear most often.</h3>
             </div>
-            <Stagger className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-              {guides.slice(0, 2).map((g) => (
-                <StaggerItem key={g.slug}>
-                  <Link href={`/resources/guides/${g.slug}`} className="group flex h-full flex-col rounded-3xl border border-line-soft bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
-                    <h3 className="font-display text-lg font-semibold leading-snug text-ink">{g.title}</h3>
-                    <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ink-soft">{g.description}</p>
-                    <span className="mt-4 text-sm text-ink-faint">{g.readTime} read · {g.chapters.length} chapters</span>
-                  </Link>
-                </StaggerItem>
-              ))}
-            </Stagger>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <Link href="/resources/faq" className="flex flex-col justify-between rounded-3xl bg-ink p-8 text-white transition-transform duration-300 hover:-translate-y-1">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-white/50">FAQ</span>
-                <h3 className="mt-3 font-display text-xl font-semibold">Answers to what we hear most often.</h3>
-              </div>
-              <ArrowUpRight className="mt-6 size-5" />
-            </Link>
-            <Link href="/resources/downloads" className="flex flex-col justify-between rounded-3xl border border-line-soft bg-white p-8 shadow-card transition-transform duration-300 hover:-translate-y-1">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-accent">Downloads</span>
-                <h3 className="mt-3 font-display text-xl font-semibold text-ink">{downloads.length} templates and frameworks, ready to use.</h3>
-              </div>
-              <ArrowUpRight className="mt-6 size-5 text-ink-faint" />
-            </Link>
-          </div>
+            <ArrowUpRight className="mt-6 size-5" />
+          </Link>
         </Container>
       </section>
 

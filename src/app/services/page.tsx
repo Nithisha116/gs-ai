@@ -23,7 +23,7 @@ export default function ServicesIndexPage() {
           <SectionHeading
             align="center"
             eyebrow="Services"
-            title="Fourteen ways to remove manual work from your business."
+            title="Six ways to remove manual work from your business."
             description="Every engagement starts with one workflow. Most expand once the first one proves out."
             className="mx-auto max-w-3xl"
           />

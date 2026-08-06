@@ -4,9 +4,7 @@ import Icon from "@/components/ui/Icon";
 import { services } from "@/data/services";
 import { commonWorkflows } from "@/data/nav";
 
-const primary = services.filter((s) =>
-  ["ai-workflow-automation", "data-orchestration", "support-automation", "ai-agents", "system-integrations", "crm-automation", "reporting-automation", "ai-chatbots"].includes(s.slug)
-);
+const primary = services;
 
 export default function MegaMenuServices({ onNavigate }: { onNavigate?: () => void }) {
   return (

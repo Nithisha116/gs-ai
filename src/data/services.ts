@@ -98,9 +98,9 @@ export const services: Service[] = ([
   },
   {
     slug: "ai-agents",
-    name: "AI Agents",
+    name: "AI Tools & Agents",
     icon: "bot",
-    tagline: "Autonomous agents that execute, not just chat.",
+    tagline: "Build internal AI tools.",
     category: "AI",
     heroDescription:
       "We build AI agents that take real actions inside your systems — reading, deciding, and executing tasks that used to require a person at the keyboard.",
@@ -132,115 +132,10 @@ export const services: Service[] = ([
     ],
   },
   {
-    slug: "business-process-automation",
-    name: "Business Process Automation",
-    icon: "git-merge",
-    tagline: "Redesign and automate core operating processes.",
-    category: "Core",
-    heroDescription:
-      "We rebuild the operating processes that run your business — onboarding, procurement, compliance — as automated systems instead of tribal knowledge.",
-    benefits: [
-      { title: "Standardized execution", description: "Every process runs the same way every time, regardless of who initiated it." },
-      { title: "Full audit trail", description: "Every step, decision, and exception is logged for compliance and review." },
-      { title: "Faster onboarding", description: "New hires follow a system, not a binder of outdated instructions." },
-      { title: "Exceptions handled gracefully", description: "Edge cases route to the right person instead of breaking the whole process." },
-    ],
-    problems: [
-      "Core processes exist only as institutional knowledge held by a few veterans.",
-      "Compliance reviews take weeks because evidence is scattered across email threads.",
-      "Process quality varies wildly depending on who executes it.",
-      "Scaling headcount doesn't scale process quality.",
-    ],
-    technologies: ["Camunda", "n8n", "Retool", "PostgreSQL", "Docusign API", "AWS"],
-    caseStudy: {
-      client: "A mid-market financial services firm",
-      industry: "Finance",
-      metric: "4.2x",
-      metricLabel: "faster compliance review",
-      description:
-        "We automated document intake, validation, and routing for a compliance-heavy onboarding process spanning five departments.",
-    },
-    faqs: [
-      { q: "Can this handle processes with a lot of exceptions?", a: "Yes — we design explicit exception paths so edge cases are routed to a human rather than silently mishandled." },
-      { q: "Do you document the process as part of this?", a: "Every automated process comes with a living process map, so it's documented by construction." },
-      { q: "What's the typical project size?", a: "Most engagements start with one high-friction process and expand once the model proves out." },
-    ],
-  },
-  {
-    slug: "crm-automation",
-    name: "CRM Automation",
-    icon: "users",
-    tagline: "Keep your CRM accurate without manual upkeep.",
-    category: "Sales",
-    heroDescription:
-      "We automate the data entry, enrichment, and routing that keeps a CRM valuable — so reps sell instead of updating fields.",
-    benefits: [
-      { title: "Always-accurate records", description: "Contact, deal, and account data stay current without reps manually updating them." },
-      { title: "Smarter lead routing", description: "Leads land with the right rep, with the right context, in seconds." },
-      { title: "Enriched automatically", description: "Firmographic and intent data populate records the moment they're created." },
-      { title: "Pipeline hygiene at scale", description: "Stale deals, missing fields, and duplicate records get flagged and fixed automatically." },
-    ],
-    problems: [
-      "Reps spend hours a week on manual data entry instead of selling.",
-      "Leads sit unassigned while a manager manually triages them.",
-      "Forecast accuracy suffers because CRM data is stale or incomplete.",
-      "Duplicate and orphaned records erode trust in the CRM.",
-    ],
-    technologies: ["Salesforce", "HubSpot", "Clay", "Zapier", "Segment", "Snowflake"],
-    caseStudy: {
-      client: "A high-growth SaaS scale-up",
-      industry: "SaaS",
-      metric: "22%",
-      metricLabel: "faster lead response",
-      description:
-        "We built automated enrichment and routing that cut lead response time and lifted rep pipeline coverage within a single quarter.",
-    },
-    faqs: [
-      { q: "Which CRMs do you support?", a: "We most commonly work with Salesforce and HubSpot, and integrate with most CRMs that expose an API." },
-      { q: "Will this change how reps work day to day?", a: "Reps see less manual entry and better-qualified leads — workflow changes are typically welcomed, not resisted." },
-      { q: "Can you fix historical data quality issues too?", a: "Yes, we typically run a one-time cleanup pass alongside the ongoing automation." },
-    ],
-  },
-  {
-    slug: "sales-automation",
-    name: "Sales Automation",
-    icon: "target",
-    tagline: "Automate prospecting, outreach, and follow-up.",
-    category: "Sales",
-    heroDescription:
-      "We automate the repetitive parts of the sales cycle — prospecting, sequencing, follow-up — so your team spends time where it actually closes deals.",
-    benefits: [
-      { title: "Consistent pipeline generation", description: "Prospecting and sequencing run continuously, independent of rep bandwidth." },
-      { title: "Personalized at scale", description: "AI-assisted personalization replaces generic mail-merge outreach." },
-      { title: "No follow-up falls through", description: "Every prospect gets a timely, tracked follow-up sequence." },
-      { title: "Reps focus on conversations", description: "Automation handles logistics; people handle persuasion." },
-    ],
-    problems: [
-      "Reps spend more time prospecting than talking to qualified buyers.",
-      "Follow-up is inconsistent and depends on individual rep discipline.",
-      "Outreach is generic because personalization doesn't scale manually.",
-      "Pipeline generation stalls whenever headcount is flat.",
-    ],
-    technologies: ["Outreach", "Apollo", "Clay", "HubSpot", "GPT-4", "Zapier"],
-    caseStudy: {
-      client: "An enterprise software vendor",
-      industry: "SaaS",
-      metric: "2.1x",
-      metricLabel: "more qualified meetings",
-      description:
-        "We automated prospecting research and personalized sequencing, more than doubling qualified meeting volume without adding headcount.",
-    },
-    faqs: [
-      { q: "Does automated outreach feel generic?", a: "We use enrichment and AI-assisted drafting to personalize each message, then have reps review before send." },
-      { q: "Will this replace our SDR team?", a: "No — it removes the repetitive research and sequencing work so SDRs spend more time on live conversations." },
-      { q: "Can it integrate with our existing sequences?", a: "Yes, we typically build on top of your existing sales engagement platform." },
-    ],
-  },
-  {
     slug: "support-automation",
-    name: "Support Automation",
+    name: "Support Triage & Ticketing",
     icon: "life-buoy",
-    tagline: "Resolve routine tickets before they reach an agent.",
+    tagline: "Streamline support data.",
     category: "Ops",
     heroDescription:
       "We automate triage, routing, and resolution for support so your team handles the complex cases while routine ones resolve instantly.",
@@ -275,7 +170,7 @@ export const services: Service[] = ([
     slug: "data-orchestration",
     name: "Data Orchestration",
     icon: "database",
-    tagline: "Keep data flowing accurately between every system.",
+    tagline: "Automate data and reporting.",
     category: "Data",
     heroDescription:
       "We build the pipelines that move, clean, and sync data between your systems, so every team works from the same accurate source of truth.",
@@ -294,7 +189,7 @@ export const services: Service[] = ([
     technologies: ["Airbyte", "dbt", "Snowflake", "BigQuery", "Fivetran", "Python", "Airflow"],
     caseStudy: {
       client: "A multi-brand retail group",
-      industry: "Retail",
+      industry: "eCommerce",
       metric: "99.8%",
       metricLabel: "data sync accuracy",
       description:
@@ -307,115 +202,10 @@ export const services: Service[] = ([
     ],
   },
   {
-    slug: "document-processing",
-    name: "Document Processing",
-    icon: "file-text",
-    tagline: "Extract, classify, and route documents automatically.",
-    category: "Data",
-    heroDescription:
-      "We automate the reading, extraction, and routing of documents — contracts, invoices, forms — so no one manually retypes what a system can read.",
-    benefits: [
-      { title: "No manual re-keying", description: "Data is extracted directly from documents into your systems of record." },
-      { title: "Handles messy formats", description: "Scanned PDFs, handwritten forms, and varied templates are all supported." },
-      { title: "Automatic classification", description: "Documents route to the right workflow the moment they arrive." },
-      { title: "Accuracy you can audit", description: "Every extraction is confidence-scored, with low-confidence cases flagged for review." },
-    ],
-    problems: [
-      "Staff spend hours manually transcribing invoices, contracts, or forms.",
-      "Inconsistent document formats break simple template-based extraction.",
-      "Errors introduced during manual entry cascade into downstream systems.",
-      "Document backlogs build up during high-volume periods.",
-    ],
-    technologies: ["AWS Textract", "Azure Document Intelligence", "GPT-4 Vision", "Python", "OCR pipelines"],
-    caseStudy: {
-      client: "A commercial real estate firm",
-      industry: "Real Estate",
-      metric: "94%",
-      metricLabel: "extraction accuracy",
-      description:
-        "We automated lease abstraction across thousands of legacy contracts, cutting a multi-week manual review process to days.",
-    },
-    faqs: [
-      { q: "Does this work with scanned or handwritten documents?", a: "Yes — modern OCR and vision models handle scanned, handwritten, and inconsistent formats well." },
-      { q: "What accuracy should we expect?", a: "Accuracy varies by document type; low-confidence extractions are flagged for human review rather than guessed." },
-      { q: "Can it plug into our document management system?", a: "Yes, output routes directly into your DMS, ERP, or CRM of choice." },
-    ],
-  },
-  {
-    slug: "erp-integration",
-    name: "ERP Integration",
-    icon: "layers",
-    tagline: "Connect your ERP to everything around it.",
-    category: "Ops",
-    heroDescription:
-      "We integrate your ERP with the sales, support, and data tools around it, so information flows without manual exports or duplicate entry.",
-    benefits: [
-      { title: "Single operational view", description: "Orders, inventory, and financials stay synchronized across every connected system." },
-      { title: "No duplicate entry", description: "Data entered once flows everywhere it's needed." },
-      { title: "Faster reporting", description: "Financial and operational reports pull from live, synced data." },
-      { title: "Vendor-agnostic", description: "Works with the ERP you already run — no forced migration." },
-    ],
-    problems: [
-      "Order and inventory data has to be manually re-entered into the ERP.",
-      "Finance and operations work from different, disconnected numbers.",
-      "ERP customization backlogs stall simple integration requests for months.",
-      "Legacy ERP systems lack modern APIs, requiring custom connectors.",
-    ],
-    technologies: ["SAP", "NetSuite", "Microsoft Dynamics", "Odoo", "MuleSoft", "REST/SOAP APIs"],
-    caseStudy: {
-      client: "A national manufacturing company",
-      industry: "Manufacturing",
-      metric: "6 systems",
-      metricLabel: "unified with ERP",
-      description:
-        "We connected legacy SAP infrastructure to modern CRM, e-commerce, and reporting tools, eliminating three full-time data entry roles.",
-    },
-    faqs: [
-      { q: "Which ERPs do you integrate with?", a: "We've worked with SAP, NetSuite, Dynamics, Odoo, and most systems exposing a modern or legacy API." },
-      { q: "What if our ERP is heavily customized?", a: "We build integrations around your specific configuration rather than assuming a standard setup." },
-      { q: "Is downtime required during integration?", a: "We design phased rollouts specifically to avoid disruption to live operations." },
-    ],
-  },
-  {
-    slug: "api-integrations",
-    name: "API Integrations",
-    icon: "plug",
-    tagline: "Connect any tool to any other tool, reliably.",
-    category: "Ops",
-    heroDescription:
-      "We build robust, monitored integrations between the tools your business runs on, so data and actions flow automatically instead of through manual bridges.",
-    benefits: [
-      { title: "Reliable, monitored connections", description: "Integrations are built with retries, alerting, and error handling, not brittle one-off scripts." },
-      { title: "Any tool, any tool", description: "If it has an API — or even just a spreadsheet export — we can connect it." },
-      { title: "Faster than platform migration", description: "Get systems talking without ripping and replacing what already works." },
-      { title: "Documented and maintainable", description: "Every integration ships with documentation your team can actually use." },
-    ],
-    problems: [
-      "Two critical tools don't talk to each other, forcing manual bridging.",
-      "Existing integrations break silently and no one notices for days.",
-      "Point solutions were each chosen well, but they don't work together.",
-      "In-house scripts maintaining integrations lack monitoring or documentation.",
-    ],
-    technologies: ["REST", "GraphQL", "Webhooks", "n8n", "AWS Lambda", "Postman", "TypeScript"],
-    caseStudy: {
-      client: "A DTC e-commerce brand",
-      industry: "eCommerce",
-      metric: "12",
-      metricLabel: "systems connected",
-      description:
-        "We integrated storefront, fulfillment, accounting, and marketing platforms into one connected operational layer.",
-    },
-    faqs: [
-      { q: "What if a tool doesn't have a public API?", a: "We evaluate alternatives — webhooks, partner APIs, or scheduled exports — to bridge the gap reliably." },
-      { q: "How do you handle integration failures?", a: "Every integration includes monitoring and alerting so failures are caught immediately, not discovered downstream." },
-      { q: "Can you maintain integrations long-term?", a: "Yes, ongoing support plans are available for monitoring and evolving integrations as your stack changes." },
-    ],
-  },
-  {
     slug: "system-integrations",
-    name: "System Integrations",
+    name: "Systems Integration",
     icon: "network",
-    tagline: "Unify fragmented systems into one operating layer.",
+    tagline: "Connect core business systems.",
     category: "Ops",
     heroDescription:
       "We connect the fragmented systems behind your operations — legacy and modern — into a single, coherent layer that your team and your automations can rely on.",
@@ -448,9 +238,9 @@ export const services: Service[] = ([
   },
   {
     slug: "reporting-automation",
-    name: "Reporting Automation",
+    name: "Support & Monitoring",
     icon: "bar-chart-3",
-    tagline: "Turn scattered data into reports that build themselves.",
+    tagline: "Monitor and improve systems.",
     category: "Data",
     heroDescription:
       "We automate the collection, calculation, and distribution of reports, so decision-makers get accurate numbers on schedule, without a manual pull-and-format process.",
@@ -479,76 +269,6 @@ export const services: Service[] = ([
       { q: "Can reports pull from multiple systems?", a: "Yes, we commonly aggregate data from several source systems into one unified report." },
       { q: "What if our metrics definitions change?", a: "Metric logic is centralized and version-controlled, so updates propagate everywhere at once." },
       { q: "Can non-technical stakeholders request changes?", a: "Yes, we typically build a lightweight layer that lets business teams adjust filters and views themselves." },
-    ],
-  },
-  {
-    slug: "ai-chatbots",
-    name: "AI Chatbots",
-    icon: "message-circle",
-    tagline: "Conversational AI grounded in your business.",
-    category: "AI",
-    heroDescription:
-      "We build conversational AI that actually knows your business — trained on your documentation, policies, and systems — for support, sales, and internal use.",
-    benefits: [
-      { title: "Grounded, not generic", description: "Responses are based on your actual documentation and data, not general web knowledge." },
-      { title: "Available everywhere", description: "Deploy across your website, product, Slack, or WhatsApp from one underlying system." },
-      { title: "Escalates intelligently", description: "Complex or sensitive conversations hand off to a human with full context." },
-      { title: "Improves over time", description: "Conversation data feeds back into improving accuracy and coverage." },
-    ],
-    problems: [
-      "Customers get inconsistent answers depending on which article they find.",
-      "Support and sales teams answer the same questions dozens of times a day.",
-      "Off-the-shelf chatbot widgets give generic, unhelpful answers.",
-      "Internal teams can't quickly find answers buried in internal docs.",
-    ],
-    technologies: ["Claude", "GPT-4", "RAG pipelines", "Pinecone", "Vector search", "Next.js"],
-    caseStudy: {
-      client: "An enterprise HR software company",
-      industry: "SaaS",
-      metric: "71%",
-      metricLabel: "of questions self-served",
-      description:
-        "We deployed a chatbot grounded in product documentation and account data that now handles the majority of pre-sales and support questions.",
-    },
-    faqs: [
-      { q: "How does the chatbot stay accurate?", a: "It retrieves answers from your live documentation and data rather than relying on memorized, static content." },
-      { q: "Can it take actions, not just answer questions?", a: "Yes — chatbots can be extended with tool access to check order status, update records, or trigger workflows." },
-      { q: "Where can it be deployed?", a: "Website, in-product widget, Slack, WhatsApp, or an internal tool — from a single underlying system." },
-    ],
-  },
-  {
-    slug: "custom-ai-solutions",
-    name: "Custom AI Solutions",
-    icon: "sparkles",
-    tagline: "Purpose-built AI for problems off the shelf.",
-    category: "AI",
-    heroDescription:
-      "When your problem doesn't fit a template, we design and build a custom AI solution around your exact workflow, data, and constraints.",
-    benefits: [
-      { title: "Built around your problem", description: "No forcing a generic tool to approximate what you actually need." },
-      { title: "Full ownership", description: "You own the resulting system outright — no lock-in to a vendor platform." },
-      { title: "Scoped and de-risked", description: "We prototype fast to validate feasibility before committing to full build." },
-      { title: "Production-grade from day one", description: "Solutions are engineered for reliability, not just demoed." },
-    ],
-    problems: [
-      "No existing product or platform addresses your specific problem well.",
-      "A previous vendor's off-the-shelf AI tool over-promised and under-delivered.",
-      "Your data or workflow has constraints that generic tools can't accommodate.",
-      "Leadership wants a real AI capability, not a proof-of-concept demo.",
-    ],
-    technologies: ["Claude", "GPT-4", "Custom ML pipelines", "AWS", "Python", "TypeScript", "PyTorch"],
-    caseStudy: {
-      client: "An industrial equipment manufacturer",
-      industry: "Manufacturing",
-      metric: "3 months",
-      metricLabel: "from concept to production",
-      description:
-        "We designed a custom predictive-maintenance model and operator-facing interface tailored to equipment data no off-the-shelf tool could parse.",
-    },
-    faqs: [
-      { q: "How do you scope a custom project?", a: "We start with a short, fixed-scope discovery and prototype phase to validate feasibility before a full build." },
-      { q: "Who owns the resulting system?", a: "You do — full source code and model ownership transfer to you at completion." },
-      { q: "What if the initial approach doesn't work?", a: "The prototype phase exists precisely to catch that early, before significant investment." },
     ],
   },
 ] as Omit<Service, "process">[]).map((service) => ({

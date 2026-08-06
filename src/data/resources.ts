@@ -166,7 +166,7 @@ export const caseStudies: CaseStudy[] = [
     client: "A mid-market wealth management firm",
     logoName: "Finstack Group",
     industry: "Finance",
-    serviceSlug: "business-process-automation",
+    serviceSlug: "ai-workflow-automation",
     title: "4.2x faster client onboarding without cutting compliance corners",
     summary: "We automated document intake, validation, and routing for a compliance-heavy client onboarding process.",
     metric: "4.2x",
@@ -192,7 +192,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "retail-inventory-sync",
     client: "A multi-brand retail group",
     logoName: "NorthBridge",
-    industry: "Retail",
+    industry: "eCommerce",
     serviceSlug: "data-orchestration",
     title: "Six systems, one accurate inventory number",
     summary: "We replaced a patchwork of manual exports with automated pipelines syncing inventory across six systems.",
@@ -220,7 +220,7 @@ export const caseStudies: CaseStudy[] = [
     client: "A commercial real estate firm",
     logoName: "Atlas Property",
     industry: "Real Estate",
-    serviceSlug: "document-processing",
+    serviceSlug: "data-orchestration",
     title: "Lease abstraction from three weeks to three days",
     summary: "We automated lease abstraction across thousands of legacy contracts using document AI.",
     metric: "94%",
@@ -247,7 +247,7 @@ export const caseStudies: CaseStudy[] = [
     client: "A national manufacturing company",
     logoName: "Solstice Industrial",
     industry: "Manufacturing",
-    serviceSlug: "erp-integration",
+    serviceSlug: "system-integrations",
     title: "Connecting a legacy ERP to a modern operating stack",
     summary: "We integrated legacy SAP infrastructure with modern CRM, e-commerce, and reporting tools.",
     metric: "6 systems",
@@ -271,92 +271,8 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export type Guide = {
-  slug: string;
-  title: string;
-  description: string;
-  readTime: string;
-  chapters: { title: string; description: string }[];
-};
-
-export const guides: Guide[] = [
-  {
-    slug: "planning-your-first-automation-project",
-    title: "Planning your first automation project",
-    description: "A step-by-step guide to selecting, scoping, and building the business case for your first automation initiative.",
-    readTime: "12 min",
-    chapters: [
-      { title: "Identifying the right first process", description: "How to pick a process with high volume, clear rules, and measurable output." },
-      { title: "Building the business case", description: "A simple ROI framework leadership will actually approve." },
-      { title: "Scoping without over-engineering", description: "Why the first version should be narrower than you think." },
-      { title: "Planning for adoption", description: "Getting the team who runs the process today bought in before launch." },
-    ],
-  },
-  {
-    slug: "evaluating-ai-agent-vendors",
-    title: "How to evaluate an AI agent vendor",
-    description: "The questions that separate a genuine agent implementation from a repackaged chatbot.",
-    readTime: "9 min",
-    chapters: [
-      { title: "What 'agent' actually means", description: "Distinguishing action-taking systems from conversational search." },
-      { title: "Questions to ask about tool access", description: "What systems can the agent read from and write to, and how is that scoped?" },
-      { title: "Evaluating safety guardrails", description: "Approval gates, audit trails, and rollback — what to require before go-live." },
-      { title: "Pricing models to watch for", description: "Per-seat vs. usage-based pricing, and what that implies about the vendor's incentives." },
-    ],
-  },
-  {
-    slug: "integration-architecture-primer",
-    title: "An integration architecture primer for operators",
-    description: "A non-technical guide to how modern system integrations are actually built, for the people who commission them.",
-    readTime: "10 min",
-    chapters: [
-      { title: "Point-to-point vs. hub-and-spoke", description: "Why the shape of your integrations matters as you add more tools." },
-      { title: "Webhooks, polling, and batch sync", description: "The tradeoffs between real-time and scheduled data movement." },
-      { title: "What 'monitored' should mean", description: "The bare minimum observability every integration should ship with." },
-      { title: "Questions for your engineering partner", description: "What to ask before signing off on an integration architecture." },
-    ],
-  },
-  {
-    slug: "data-readiness-checklist",
-    title: "A data readiness checklist before deploying AI",
-    description: "Practical steps to get your data into shape before layering AI-driven decisions on top of it.",
-    readTime: "8 min",
-    chapters: [
-      { title: "Auditing your sources of truth", description: "Finding where the same fact lives in more than one place." },
-      { title: "Deduplication and schema consistency", description: "The unglamorous work that determines AI accuracy." },
-      { title: "Setting up monitoring before launch", description: "Catching data drift before it reaches a decision." },
-    ],
-  },
-  {
-    slug: "measuring-automation-roi",
-    title: "Measuring automation ROI after launch",
-    description: "How to track whether an automation project is actually delivering the return it promised.",
-    readTime: "7 min",
-    chapters: [
-      { title: "Leading vs. lagging indicators", description: "What to measure in week one versus quarter one." },
-      { title: "Accounting for adoption curves", description: "Why month-one numbers understate long-term value." },
-      { title: "Reporting to leadership", description: "A simple template for communicating automation ROI upward." },
-    ],
-  },
-];
-
-export type Download = {
-  title: string;
-  type: string;
-  description: string;
-};
-
-export const downloads: Download[] = [
-  { title: "Automation ROI Calculator", type: "Template", description: "A spreadsheet model for estimating time and cost savings before you build." },
-  { title: "Process Discovery Interview Script", type: "Framework", description: "The exact questions we use to map a workflow before automating it." },
-  { title: "AI Agent Vendor Evaluation Scorecard", type: "Checklist", description: "A weighted scorecard for comparing agent vendors on safety, capability, and cost." },
-  { title: "Integration Architecture Diagram Kit", type: "Template", description: "Editable diagram templates for documenting system integrations." },
-  { title: "Data Readiness Audit Checklist", type: "Checklist", description: "A pre-deployment checklist for data quality before an AI rollout." },
-  { title: "Change Management Playbook", type: "Framework", description: "A short playbook for driving adoption of a new automated process." },
-];
-
 export const resourceFaqs = [
   { q: "Are your case studies based on real clients?", a: "Yes — details are generalized where clients request confidentiality, but every metric reflects an actual engagement." },
-  { q: "Can I request a guide on a specific topic?", a: "Yes, reach out through the contact page and we'll consider it for the guide library." },
+  { q: "Can I request an article on a specific topic?", a: "Yes, reach out through the contact page and we'll consider it for the article library." },
   { q: "Do you offer these resources under NDA for deeper detail?", a: "For active engagements, we can share more detailed benchmarks and architecture under NDA." },
 ];

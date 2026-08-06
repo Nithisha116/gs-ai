@@ -227,45 +227,6 @@ export const industries: Industry[] = [
     ],
   },
   {
-    slug: "manufacturing",
-    name: "Manufacturing",
-    icon: "factory",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1400&auto=format&fit=crop",
-    tagline: "Automate production data and supply chain coordination.",
-    heroDescription:
-      "We connect shop floor, ERP, and supply chain systems so manufacturing operations run on synchronized data instead of manual reconciliation.",
-    painPoints: [
-      "Production data is trapped in disconnected shop-floor systems.",
-      "Supply chain coordination relies on manual emails and spreadsheets.",
-      "ERP customization backlogs stall integration requests for months.",
-      "Maintenance is reactive rather than predictive.",
-    ],
-    solutions: [
-      { title: "Shop floor to ERP integration", description: "Production data flows automatically into planning and financial systems." },
-      { title: "Supply chain automation", description: "Purchase orders and supplier communication run through an automated pipeline." },
-      { title: "Predictive maintenance", description: "Equipment data feeds models that flag maintenance needs before failure." },
-    ],
-    workflows: ["Production data sync", "Supplier coordination", "Inventory & procurement automation", "Predictive maintenance alerts"],
-    automationExamples: [
-      { title: "ERP–shop floor integration", description: "Legacy SAP infrastructure connected to modern reporting and planning tools." },
-      { title: "Predictive maintenance model", description: "Equipment sensor data feeds a model that flags failures before they happen." },
-    ],
-    roi: [
-      { metric: "6 systems", label: "unified with ERP" },
-      { metric: "3 mo", label: "concept to production" },
-    ],
-    caseStudy: {
-      client: "A national manufacturing company",
-      result: "Eliminated three full-time manual data-entry roles",
-      description:
-        "We connected legacy SAP infrastructure to modern CRM, e-commerce, and reporting tools across the operation.",
-    },
-    faqs: [
-      { q: "Can you work with our legacy shop-floor systems?", a: "Yes, much of our manufacturing work involves connecting legacy, on-premise systems." },
-      { q: "Do you build predictive maintenance models?", a: "Yes, custom models are built around your specific equipment and sensor data." },
-    ],
-  },
-  {
     slug: "agencies",
     name: "Agencies",
     icon: "megaphone",
@@ -344,9 +305,10 @@ export const industries: Industry[] = [
     ],
   },
   {
-    slug: "retail",
-    name: "Retail",
+    slug: "ecommerce",
+    name: "eCommerce",
     icon: "shopping-bag",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400&auto=format&fit=crop",
     tagline: "Automate inventory, fulfillment, and reporting.",
     heroDescription:
       "We automate inventory synchronization, fulfillment coordination, and reporting across storefronts, so retail operations run on accurate, real-time data.",
@@ -379,120 +341,6 @@ export const industries: Industry[] = [
     faqs: [
       { q: "Which e-commerce platforms do you support?", a: "We integrate with Shopify, BigCommerce, and most major e-commerce and POS platforms." },
       { q: "Can this handle peak-season volume?", a: "Yes, pipelines are architected to scale with volume spikes without manual intervention." },
-    ],
-  },
-  {
-    slug: "legal",
-    name: "Legal",
-    icon: "scale",
-    tagline: "Automate document review and matter administration.",
-    heroDescription:
-      "We automate document review, intake, and matter administration so legal teams spend billable time on judgment, not paperwork.",
-    painPoints: [
-      "Associates spend hours on manual document review and abstraction.",
-      "Matter intake and conflict checks are handled manually.",
-      "Billing and time tracking are inconsistent across matters.",
-      "Document versions and approvals are tracked over email.",
-    ],
-    solutions: [
-      { title: "Automated document review", description: "Contracts and case documents are extracted, summarized, and flagged for review." },
-      { title: "Matter intake automation", description: "New matter intake and conflict checks run through an automated pipeline." },
-      { title: "Billing & time automation", description: "Time capture and billing workflows run consistently across every matter." },
-    ],
-    workflows: ["Document review & abstraction", "Matter intake & conflict checks", "Billing & time tracking", "Approval routing"],
-    automationExamples: [
-      { title: "Contract clause extraction", description: "Key clauses and obligations are extracted automatically from contract documents." },
-      { title: "Automated conflict checks", description: "New matter intake automatically screens against existing client and matter records." },
-    ],
-    roi: [
-      { metric: "94%", label: "extraction accuracy" },
-      { metric: "3 wks → 3 days", label: "review turnaround" },
-    ],
-    caseStudy: {
-      client: "A mid-size corporate law firm",
-      result: "Document review turnaround cut from weeks to days",
-      description:
-        "We automated contract abstraction and matter intake, freeing associate time for higher-value legal work.",
-    },
-    faqs: [
-      { q: "Is client confidentiality protected?", a: "Yes, every legal engagement is architected around strict data handling and confidentiality requirements." },
-      { q: "Can this integrate with our practice management system?", a: "We integrate with Clio, NetDocuments, iManage, and most major legal platforms." },
-    ],
-  },
-  {
-    slug: "construction",
-    name: "Construction",
-    icon: "hard-hat",
-    tagline: "Automate project documentation and coordination.",
-    heroDescription:
-      "We automate project documentation, subcontractor coordination, and reporting so construction teams spend less time chasing paperwork and more time building.",
-    painPoints: [
-      "Project documentation is scattered across email, paper, and spreadsheets.",
-      "Subcontractor coordination and scheduling is manual and error-prone.",
-      "Change orders and approvals are slow to process.",
-      "Progress reporting to stakeholders takes days to assemble.",
-    ],
-    solutions: [
-      { title: "Automated documentation intake", description: "Site reports, RFIs, and change orders are captured and routed automatically." },
-      { title: "Subcontractor coordination", description: "Scheduling and communication workflows run through one automated system." },
-      { title: "Stakeholder reporting automation", description: "Progress reports assemble automatically from live project data." },
-    ],
-    workflows: ["Documentation intake & routing", "Subcontractor scheduling", "Change order approvals", "Progress reporting"],
-    automationExamples: [
-      { title: "RFI & change order routing", description: "Field documentation is captured and routed to the right approver automatically." },
-      { title: "Automated progress reports", description: "Stakeholder reports assemble from live project management data on schedule." },
-    ],
-    roi: [
-      { metric: "2.3x", label: "faster approval cycle" },
-      { metric: "15 hrs/wk", label: "admin time recovered" },
-    ],
-    caseStudy: {
-      client: "A commercial general contractor",
-      result: "Change order approval cycle cut by more than half",
-      description:
-        "We automated documentation intake and approval routing across multiple concurrent job sites.",
-    },
-    faqs: [
-      { q: "Can field teams use this from a mobile device?", a: "Yes, intake workflows are designed to work from mobile devices on the job site." },
-      { q: "Does this integrate with our project management software?", a: "We integrate with Procore, Buildertrend, and most major construction platforms." },
-    ],
-  },
-  {
-    slug: "hospitality",
-    name: "Hospitality",
-    icon: "concierge-bell",
-    tagline: "Automate guest communication and back-office operations.",
-    heroDescription:
-      "We automate guest communication, booking coordination, and back-office reporting so hospitality teams deliver a better guest experience with less manual effort.",
-    painPoints: [
-      "Guest inquiries and requests are handled manually across channels.",
-      "Booking data is fragmented across property, channel, and finance systems.",
-      "Staff scheduling and back-office reporting consume management time.",
-      "Guest experience is inconsistent depending on staff availability.",
-    ],
-    solutions: [
-      { title: "AI-assisted guest communication", description: "Common guest requests and questions are handled instantly, any time of day." },
-      { title: "Booking data synchronization", description: "Property, channel, and finance systems stay in sync automatically." },
-      { title: "Automated back-office reporting", description: "Occupancy and revenue reports assemble automatically across properties." },
-    ],
-    workflows: ["Guest inquiry handling", "Booking & channel sync", "Staff scheduling", "Revenue & occupancy reporting"],
-    automationExamples: [
-      { title: "24/7 guest messaging assistant", description: "Common pre- and post-stay questions are resolved instantly across channels." },
-      { title: "Multi-property reporting", description: "Occupancy and revenue data rolls up automatically across every property." },
-    ],
-    roi: [
-      { metric: "65%", label: "inquiries self-served" },
-      { metric: "12 hrs/wk", label: "management time recovered" },
-    ],
-    caseStudy: {
-      client: "A boutique hotel group",
-      result: "Guest response time cut from hours to seconds",
-      description:
-        "We deployed an AI guest messaging assistant and automated cross-property reporting for a multi-location boutique hotel group.",
-    },
-    faqs: [
-      { q: "Can this integrate with our PMS?", a: "Yes, we integrate with major property management systems and OTA channel managers." },
-      { q: "Does the guest assistant work across languages?", a: "Yes, multilingual support is standard for guest-facing automation." },
     ],
   },
 ];

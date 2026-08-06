@@ -23,7 +23,7 @@ export default function IndustriesIndexPage() {
           <SectionHeading
             align="center"
             eyebrow="Industries"
-            title="Twelve industries. One disciplined approach."
+            title="Eight industries. One disciplined approach."
             description="Automation looks different in a hospital than it does in a warehouse. We design around your constraints, not a generic template."
             className="mx-auto max-w-3xl"
           />

@@ -210,10 +210,11 @@ export const contactSection = {
     description:
       "Tell us about your goals, and we'll tailor our expertise to fit your needs. Fill out the form below, and we'll get back to you soon.",
     subjects: [
-      "Intelligent Automation & AI",
-      "System Integrations",
-      "AI Agents & Internal Tools",
+      "AI Workflow Automation",
+      "AI Tools & Agents",
+      "Support Triage & Ticketing",
       "Data Orchestration",
+      "Systems Integration",
       "Support & Monitoring",
     ],
     note: "We'll only use your info to respond to your inquiry.",
