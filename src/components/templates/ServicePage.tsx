@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check, Sparkles } from "lucide-react";
 import Icon from "@/components/ui/Icon";
 import AfxButton from "@/components/service/afx/AfxButton";
@@ -290,8 +291,8 @@ export default function ServicePage({ service }: { service: Service }) {
 
         <Wrap className="relative grid items-stretch gap-8 lg:grid-cols-2">
           <div className="relative overflow-hidden rounded-[20px] bg-[#0b0a1e]/45 p-9 text-white backdrop-blur-2xl sm:p-10">
-            <div className="absolute inset-0 -z-10 lg:hidden">
-              <ContactArt />
+            <div className="absolute inset-0 -z-10">
+              <Image src="/discovery-bg.jpg" alt="" fill className="object-cover" />
             </div>
             <Eyebrow className="text-white/70">{contactSection.eyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-md text-[34px] leading-[1.08] sm:text-[42px] lg:text-[46px] lg:leading-[46px]">
