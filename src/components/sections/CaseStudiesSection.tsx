@@ -38,7 +38,7 @@ export default function CaseStudiesSection() {
           align="center"
           eyebrow="Proof &amp; credibility"
           title="Proven results."
-          description="Real outcomes from live GrowSpark engagements — we measure impact, not activity."
+          description="Real outcomes from live McCarthy engagements — we measure impact, not activity."
           className="mx-auto"
         />
 

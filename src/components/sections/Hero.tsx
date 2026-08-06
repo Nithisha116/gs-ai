@@ -20,13 +20,13 @@ export default function Hero() {
           
 
           <h1 className="mt-7 text-balance font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-[3.75rem] lg:text-[4.5rem]">
-            Automate the busywork.
+            Automate critical workflows.
             <br />
-            <span className="text-accent">Elevate</span> what your team does best.
+            <span className="text-accent">Integrate</span> the tools you rely on.
           </h1>
 
           <p className="mt-7 max-w-xl text-balance text-lg leading-relaxed text-ink-soft sm:text-xl">
-            GrowSpark designs and ships AI workflow automation, agents, and system integrations for enterprises that refuse to slow down.
+            End-to-end automation across Sales, Support, Finance, and Operations.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">

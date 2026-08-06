@@ -11,7 +11,7 @@ export const industryLinks = [
 
 export const aboutLinks = [
   { name: "Who We Are", slug: "who-we-are", description: "Our story, mission, and what we believe about automation." },
-  { name: "Leadership", slug: "leadership", description: "The people setting the direction for GrowSpark." },
+  { name: "Leadership", slug: "leadership", description: "The people setting the direction for McCarthy." },
   { name: "Our Process", slug: "process", description: "How we take a workflow from idea to production." },
 ];
 

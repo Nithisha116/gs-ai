@@ -7,7 +7,7 @@ import { leadership } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Leadership",
-  description: "The people setting the direction for GrowSpark.",
+  description: "The people setting the direction for McCarthy.",
 };
 
 export default function LeadershipPage() {

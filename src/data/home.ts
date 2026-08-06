@@ -1,6 +1,6 @@
 export const homeTestimonials = [
   {
-    quote: "GrowSpark didn't sell us a platform. They automated the actual process, on the tools we already had, in six weeks.",
+    quote: "McCarthy didn't sell us a platform. They automated the actual process, on the tools we already had, in six weeks.",
     author: "Operations Director",
     role: "Regional Logistics Operator",
   },
@@ -10,7 +10,7 @@ export const homeTestimonials = [
     role: "B2B SaaS Company",
   },
   {
-    quote: "We'd tried two other automation vendors before. GrowSpark was the first team that understood compliance wasn't optional.",
+    quote: "We'd tried two other automation vendors before. McCarthy was the first team that understood compliance wasn't optional.",
     author: "Head of Compliance",
     role: "Wealth Management Firm",
   },

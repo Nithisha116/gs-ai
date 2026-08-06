@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -32,21 +33,37 @@ export default function IndustriesIndexPage() {
 
       <section className="pb-24 lg:pb-32">
         <Container>
-          <Stagger className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
               <StaggerItem key={industry.slug}>
                 <Link
                   href={`/industries/${industry.slug}`}
-                  className="group flex h-full flex-col rounded-3xl border border-line-soft bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover"
+                  draggable={false}
+                  className="group block overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-card-hover"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-2xl bg-surface-soft text-ink transition-colors duration-300 group-hover:bg-accent group-hover:text-white">
-                    <Icon name={industry.icon} />
-                  </span>
-                  <span className="mt-6 flex items-center justify-between gap-2">
-                    <span className="font-display text-lg font-semibold text-ink">{industry.name}</span>
-                    <ArrowUpRight className="size-4 shrink-0 text-ink-faint transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
-                  </span>
-                  <span className="mt-2.5 text-[0.95rem] leading-relaxed text-ink-soft">{industry.tagline}</span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={industry.heroImage}
+                      alt={industry.name}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-black/0" />
+                    <span className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-full bg-white/90 text-ink shadow-sm backdrop-blur-sm">
+                      <Icon name={industry.icon} className="size-4.5" />
+                    </span>
+                  </div>
+
+                  <div className="p-6">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-display text-lg font-semibold text-ink">{industry.name}</span>
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-surface-soft text-ink transition-all duration-300 group-hover:rotate-45 group-hover:bg-accent group-hover:text-white">
+                        <ArrowUpRight className="size-4" />
+                      </span>
+                    </div>
+                    <span className="mt-2.5 block text-[0.95rem] leading-relaxed text-ink-soft">{industry.tagline}</span>
+                  </div>
                 </Link>
               </StaggerItem>
             ))}

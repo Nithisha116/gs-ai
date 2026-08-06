@@ -204,7 +204,7 @@ export const contactSection = {
   phoneLabel: "Call us at:",
   phone: "1-800-356-8933",
   emailLabel: "Email us:",
-  email: "hello@growspark.com",
+  email: "hello@McCarthy.com",
   form: {
     title: "Schedule a discovery call",
     description:

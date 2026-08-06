@@ -12,7 +12,7 @@ export default function Logo({ variant = "dark" }: { variant?: "dark" | "light" 
         <span className={cn("absolute bottom-0 left-1/2 size-3.5 -translate-x-1/2 rounded-full", isLight ? "bg-white" : "bg-ink")} />
       </span>
       <span className={cn("font-display text-[1.15rem] font-bold tracking-tight", isLight ? "text-white" : "text-ink")}>
-        GrowSpark
+        McCarthy
       </span>
     </Link>
   );

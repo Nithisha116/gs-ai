@@ -2,7 +2,7 @@ export const companyStory = {
   founded: "2021",
   hq: "Remote-first, with hubs in the US and India",
   mission:
-    "We believe most enterprise headcount growth is a symptom of unautomated process, not a requirement for scale. GrowSpark exists to close that gap.",
+    "We believe most enterprise headcount growth is a symptom of unautomated process, not a requirement for scale. McCarthy exists to close that gap.",
   values: [
     { title: "Ship, don't pitch", description: "We measure ourselves on working systems in production, not decks and roadmaps." },
     { title: "Own the outcome", description: "We stay accountable to the metric that mattered on day one, not just the handoff." },
@@ -27,7 +27,7 @@ export const leadership = [
   {
     name: "Priya Nandakumar",
     role: "Co-Founder & CTO",
-    bio: "Built data infrastructure teams at two unicorn startups. Leads GrowSpark's engineering and AI architecture.",
+    bio: "Built data infrastructure teams at two unicorn startups. Leads McCarthy's engineering and AI architecture.",
   },
   {
     name: "Marcus Feld",
@@ -37,7 +37,7 @@ export const leadership = [
   {
     name: "Sana Ibrahim",
     role: "Head of AI Research",
-    bio: "Former applied ML researcher. Leads GrowSpark's agent architecture and model evaluation practice.",
+    bio: "Former applied ML researcher. Leads McCarthy's agent architecture and model evaluation practice.",
   },
 ];
 

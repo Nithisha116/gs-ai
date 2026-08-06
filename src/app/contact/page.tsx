@@ -9,7 +9,7 @@ import LiquidGlassBackground from "@/components/backgrounds/LiquidGlassBackgroun
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Book a discovery call with GrowSpark or send us a message about your automation project.",
+  description: "Book a discovery call with McCarthy or send us a message about your automation project.",
 };
 
 const contactFaqs = [

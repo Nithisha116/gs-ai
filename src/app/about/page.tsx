@@ -9,7 +9,7 @@ import { aboutLinks } from "@/data/nav";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Who GrowSpark is, how we work, and who we work with.",
+  description: "Who McCarthy is, how we work, and who we work with.",
 };
 
 export default function AboutIndexPage() {
@@ -18,7 +18,7 @@ export default function AboutIndexPage() {
       <PageHero
         eyebrow="About"
         title="A team built to ship automation, not slides."
-        description="Get to know GrowSpark — our story, our leadership, our process, and how we work."
+        description="Get to know McCarthy — our story, our leadership, our process, and how we work."
       />
 
       <section className="pb-24 lg:pb-32">

@@ -32,11 +32,11 @@ const labelFont = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "GrowSpark — AI Automation & Consulting for the Enterprise",
-    template: "%s — GrowSpark",
+    default: "McCarthy — AI Automation & Consulting for the Enterprise",
+    template: "%s — McCarthy",
   },
   description:
-    "GrowSpark designs and ships AI workflow automation, agents, and system integrations for enterprises that refuse to slow down.",
+    "McCarthy designs and ships AI workflow automation, agents, and system integrations for enterprises that refuse to slow down.",
 };
 
 export default function RootLayout({
