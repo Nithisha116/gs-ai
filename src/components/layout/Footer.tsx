@@ -37,45 +37,55 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-black">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <Image src="/footer-bg.jpg" alt="" fill unoptimized className="object-cover" />
+        <Image
+          src="/footer-bg.jpg"
+          alt=""
+          fill
+          unoptimized
+          className="object-contain object-left"
+        />
       </div>
 
       <Container className="relative pt-16 lg:pt-20">
-        <Logo variant="light" />
-
-        <div className="mt-14 max-w-xl sm:mt-20 lg:mt-24">
-          <h2 className="text-balance font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
-            Built to ship. Engineered to keep running.
-          </h2>
-          <p className="mt-4 text-[0.95rem] leading-relaxed text-white/60">
-            We design, ship, and operate the automation your team runs on every day.
-          </p>
-          <div className="mt-7 flex flex-wrap items-center gap-3">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform duration-300 hover:-translate-y-0.5"
-            >
-              Book a discovery call
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
-            <a
-              href="tel:+919490579720"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/50"
-            >
-              <Phone className="size-4" />
-              +91 94905 79720
-            </a>
-            <a
-              href="mailto:nithishareddy113@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/50"
-            >
-              <Mail className="size-4" />
-              nithishareddy113@gmail.com
-            </a>
+        <div className="flex justify-end">
+          <div className="max-w-xl sm:mt-6 lg:mt-10">
+            <h2 className="text-balance font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
+              Built to ship. Engineered to keep running.
+            </h2>
+            <p className="mt-4 text-[0.95rem] leading-relaxed text-white/60">
+              We design, ship, and operate the automation your team runs on every day.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Book a discovery call
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </Link>
+              <a
+                href="tel:+919490579720"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/50"
+              >
+                <Phone className="size-4" />
+                +91 94905 79720
+              </a>
+              <a
+                href="mailto:nithishareddy113@gmail.com"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white transition-colors duration-300 hover:border-white/50"
+              >
+                <Mail className="size-4" />
+                nithishareddy113@gmail.com
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-10 border-t border-white/10 py-12 sm:grid-cols-3">
+        <div className="mt-20 lg:mt-28">
+          <Logo variant="light" />
+        </div>
+
+        <div className="mt-6 grid grid-cols-2 gap-10 border-t border-white/10 py-12 sm:grid-cols-3 sm:ml-auto sm:max-w-2xl">
           <div>
             <FooterHeading>Services</FooterHeading>
             <ul className="mt-5 space-y-3.5">
