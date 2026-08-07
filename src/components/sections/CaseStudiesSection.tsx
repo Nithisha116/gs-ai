@@ -10,10 +10,10 @@ import { caseStudies } from "@/data/resources";
 const featured = caseStudies.slice(0, 4);
 
 const cardThemes = [
-  { bg: "#EFE9FE", chip: "bg-white/60", stat: "bg-white/45" },
-  { bg: "#E6DCFE", chip: "bg-white/55", stat: "bg-white/40" },
-  { bg: "#F5E9FB", chip: "bg-white/60", stat: "bg-white/45" },
-  { bg: "#ECE8FF", chip: "bg-white/55", stat: "bg-white/40" },
+  { bg: "#D8C6FB", chip: "bg-white/60", stat: "bg-white/45" },
+  { bg: "#AFDBFE", chip: "bg-white/55", stat: "bg-white/40" },
+  { bg: "#93F2AC", chip: "bg-white/60", stat: "bg-white/45" },
+  { bg: "#FBB4D8", chip: "bg-white/55", stat: "bg-white/40" },
 ];
 
 const TOP_BASE = 6.5; // rem — clears the floating navbar

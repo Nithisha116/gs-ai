@@ -9,6 +9,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import CTASection from "@/components/sections/CTASection";
 import SubNav from "@/components/service/afx/SubNav";
 import LiquidGlassBackground from "@/components/backgrounds/LiquidGlassBackground";
+import { CornerBlob, WaveDivider } from "@/components/ui/SectionCurve";
 import type { Industry } from "@/data/industries";
 
 const subNavItems = [
@@ -23,24 +24,24 @@ const categoryLabels = ["Efficiency", "Operations", "Future readiness"];
 export default function IndustryPage({ industry }: { industry: Industry }) {
   return (
     <>
-      <section className="relative overflow-hidden pt-40 lg:pt-48">
+      <section className="relative flex min-h-[680px] flex-col overflow-hidden pt-24 lg:h-[88vh] lg:min-h-[720px] lg:pt-28">
         <LiquidGlassBackground className="opacity-70" />
-        <Container className="relative pb-14 lg:pb-20">
+        <Container className="relative shrink-0">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-sm font-medium text-accent shadow-sm ring-1 ring-accent/10">
               <Icon name={industry.icon} className="size-3.5" />
               Industry
             </span>
           </Reveal>
-          <Reveal delay={0.05} className="mt-6 max-w-3xl">
+          <Reveal delay={0.05} className="mt-4 max-w-3xl">
             <h1 className="text-balance font-display text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-[3.5rem]">
               AI &amp; Automation for {industry.name} Teams
             </h1>
           </Reveal>
-          <Reveal delay={0.1} className="mt-6 max-w-2xl">
+          <Reveal delay={0.1} className="mt-4 max-w-2xl">
             <p className="text-balance text-lg leading-relaxed text-ink-soft sm:text-xl">{industry.heroDescription}</p>
           </Reveal>
-          <Reveal delay={0.16} className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <Reveal delay={0.16} className="mt-6 flex flex-col gap-4 sm:flex-row">
             <Button href="/contact" size="lg">
               Book a discovery call
             </Button>
@@ -48,17 +49,18 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
               Browse all industries
             </Button>
           </Reveal>
+
+          <div className="sticky top-24 z-30 mt-6 hidden justify-end lg:flex">
+            <SubNav items={subNavItems} />
+          </div>
         </Container>
 
-        <div className="sticky top-24 z-30 hidden border-y border-line-soft bg-white/90 backdrop-blur-md lg:block">
-          <Container className="flex justify-end py-4">
-            <SubNav items={subNavItems} />
-          </Container>
-        </div>
-
-        <div className="relative h-[280px] w-full overflow-hidden sm:h-[380px] lg:h-[480px]">
-          <Image src={industry.heroImage} alt={industry.name} fill priority className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-black/10" />
+        <div className="relative mt-6 min-h-[200px] flex-1 lg:mt-8">
+          <CornerBlob className="-top-8 left-0 z-0 h-24 w-28 text-ink sm:-top-10 sm:h-32 sm:w-36 lg:-top-12 lg:h-40 lg:w-48" />
+          <div className="absolute inset-0 z-10 overflow-hidden">
+            <Image src={industry.heroImage} alt={industry.name} fill priority className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-black/10" />
+          </div>
         </div>
       </section>
 
@@ -72,32 +74,33 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
                 <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">{industry.tagline}</p>
               </Reveal>
             </div>
-            <Stagger className="space-y-4">
+            <Stagger className="space-y-6 lg:pt-2">
               {industry.painPoints.map((p) => (
                 <StaggerItem key={p}>
-                  <div className="flex items-start gap-4 rounded-2xl border border-line-soft bg-white p-5 shadow-card">
-                    <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                  <div className="flex items-center gap-4">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                       <Icon name="alert-triangle" className="size-4" />
                     </span>
-                    <p className="pt-1 text-[0.95rem] leading-relaxed text-ink-soft">{p}</p>
+                    <p className="text-[0.95rem] leading-relaxed text-ink-soft">{p}</p>
                   </div>
                 </StaggerItem>
               ))}
             </Stagger>
           </div>
+          <div className="mt-16 border-t border-line-soft lg:mt-20" />
         </Container>
       </section>
 
       {/* Solutions */}
-      <section id="solutions" className="scroll-mt-32 bg-surface-lavender/40 py-20 lg:py-28">
+      <section id="solutions" className="scroll-mt-32 py-20 lg:py-28">
         <Container>
           <SectionHeading eyebrow="Our deliverables" title="What we help automate" align="center" className="mx-auto" />
-          <Stagger className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <Stagger className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
             {industry.solutions.map((s, i) => {
               const checklist = industry.workflows.filter((_, wi) => wi % industry.solutions.length === i);
               return (
                 <StaggerItem key={s.title}>
-                  <div className="h-full rounded-3xl bg-white p-7 shadow-card">
+                  <div className="h-full">
                     <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                       {categoryLabels[i % categoryLabels.length]}
                     </span>
@@ -121,12 +124,11 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
         </Container>
       </section>
 
+      <WaveDivider color="#F5F4FF" />
+
       {/* Use Cases */}
-      <section id="use-cases" className="scroll-mt-32 relative overflow-hidden py-20 lg:py-28">
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <Image src="/automation-examples-bg.jpg" alt="" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/45 via-white/60 to-white" />
-        </div>
+      <section id="use-cases" className="scroll-mt-32 relative overflow-hidden py-20 lg:py-28" style={{ backgroundColor: "#F5F4FF" }}>
+        <LiquidGlassBackground className="opacity-80" />
         <Container className="relative">
           <SectionHeading
             eyebrow="Automation examples"
@@ -138,18 +140,22 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
           <Stagger className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {industry.automationExamples.map((ex) => (
               <StaggerItem key={ex.title}>
-                <div className="flex h-full flex-col rounded-3xl border border-line-soft bg-white/90 p-7 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
-                  <span className="w-fit rounded-full border border-line px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink-soft">
+                <div className="flex h-full flex-col rounded-3xl bg-white/70 p-7 shadow-card backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+                  <span className="w-fit rounded-full bg-white/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink-soft">
                     {industry.name}
                   </span>
                   <p className="mt-5 font-display text-lg font-semibold text-ink">{ex.title}</p>
-                  <p className="mt-2.5 text-[0.95rem] leading-relaxed text-ink-soft">{ex.description}</p>
+                  <div className="mt-4 border-t border-line-soft pt-4">
+                    <p className="text-[0.95rem] leading-relaxed text-ink-soft">{ex.description}</p>
+                  </div>
                 </div>
               </StaggerItem>
             ))}
           </Stagger>
         </Container>
       </section>
+
+      <WaveDivider color="#FFFFFF" />
 
       {/* Impact */}
       <section id="impact" className="scroll-mt-32 py-20 lg:py-28">
@@ -172,10 +178,20 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
               </StaggerItem>
             ))}
             <StaggerItem>
-              <div className="flex h-full flex-col justify-between rounded-3xl bg-ink p-8 text-white">
+              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-ink p-8 pb-12 text-white">
                 <Quote className="size-7 text-white/40" />
-                <p className="mt-4 font-display text-lg leading-snug">{industry.caseStudy.description}</p>
-                <p className="mt-6 text-sm text-white/60">— {industry.caseStudy.client}</p>
+                <div>
+                  <p className="mt-4 font-display text-lg leading-snug">{industry.caseStudy.description}</p>
+                  <p className="mt-6 text-sm text-white/60">— {industry.caseStudy.client}</p>
+                </div>
+                <div
+                  className="absolute inset-x-0 bottom-0 h-3"
+                  style={{
+                    backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1.5px)",
+                    backgroundSize: "8px 8px",
+                  }}
+                  aria-hidden
+                />
               </div>
             </StaggerItem>
           </Stagger>
@@ -196,6 +212,10 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
         secondaryLabel="Browse all industries"
         secondaryHref="/industries"
       />
+
+      <div className="relative h-12 overflow-visible bg-ink sm:h-16" aria-hidden>
+        <CornerBlob flip className="-top-24 left-0 h-32 w-40 text-ink sm:-top-36 sm:h-44 sm:w-52" />
+      </div>
     </>
   );
 }
