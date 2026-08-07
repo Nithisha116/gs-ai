@@ -13,8 +13,8 @@ export default function TrustedCompanies() {
   return (
     <section className="border-y border-line-soft bg-white py-14 lg:py-16">
       <Container>
-        <p className="text-sm font-medium uppercase tracking-wider text-ink-faint">
-          Trusted by operations teams at
+        <p className="text-center text-sm font-medium uppercase tracking-wider text-ink-faint">
+          Teams choose us for reliable delivery
         </p>
 
         <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-2 lg:grid-cols-5 lg:items-center lg:gap-6">
