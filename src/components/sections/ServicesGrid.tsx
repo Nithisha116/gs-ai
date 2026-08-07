@@ -47,42 +47,44 @@ export default function ServicesGrid() {
       </Container>
 
       <Reveal delay={0.1} className="mt-14">
-        <div
-          className="overflow-hidden"
-          ref={emblaRef}
-          role="region"
-          aria-roledescription="carousel"
-          aria-label="Services"
-          tabIndex={0}
-          onKeyDown={handleKeyDown}
-        >
-          <div className="flex gap-6 px-6 lg:px-[max(24px,calc((100vw-1280px)/2+24px))]">
-            {featured.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                draggable={false}
-                onDragStart={(e) => e.preventDefault()}
-                className="group flex min-w-0 flex-[0_0_88%] shrink-0 select-none flex-col overflow-hidden rounded-3xl border border-line-soft bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover sm:flex-[0_0_60%] lg:flex-[0_0_23%]"
-              >
-                <span className="relative flex aspect-square items-center justify-center overflow-hidden bg-[linear-gradient(160deg,#f7f6ff_0%,#ece8ff_100%)]">
-                  <Icon
-                    name={service.icon}
-                    className="size-16 text-ink/70 transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
-                </span>
-
-                <span className="flex flex-1 flex-col p-7">
-                  <span className="font-display text-lg font-semibold text-ink">{service.name}</span>
-                  <span className="mt-2.5 flex-1 text-[0.95rem] leading-relaxed text-ink-soft">{service.tagline}</span>
-                  <span className="mt-6 flex size-9 items-center justify-center rounded-full bg-surface-soft text-ink transition-all duration-300 group-hover:bg-accent group-hover:text-white">
-                    <ArrowUpRight className="size-4" />
+        <Container>
+          <div
+            className="overflow-hidden"
+            ref={emblaRef}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Services"
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+          >
+            <div className="flex gap-6">
+              {featured.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  draggable={false}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="group flex min-w-0 flex-[0_0_100%] shrink-0 select-none flex-col overflow-hidden rounded-3xl border border-line-soft bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover lg:flex-[0_0_calc(25%-18px)]"
+                >
+                  <span className="relative flex aspect-square items-center justify-center overflow-hidden bg-[linear-gradient(160deg,#f7f6ff_0%,#ece8ff_100%)]">
+                    <Icon
+                      name={service.icon}
+                      className="size-16 text-ink/70 transition-transform duration-500 ease-out group-hover:scale-110"
+                    />
                   </span>
-                </span>
-              </Link>
-            ))}
+
+                  <span className="flex flex-1 flex-col p-7">
+                    <span className="font-display text-lg font-semibold text-ink">{service.name}</span>
+                    <span className="mt-2.5 flex-1 text-[0.95rem] leading-relaxed text-ink-soft">{service.tagline}</span>
+                    <span className="mt-6 flex size-9 items-center justify-center rounded-full bg-surface-soft text-ink transition-all duration-300 group-hover:bg-accent group-hover:text-white">
+                      <ArrowUpRight className="size-4" />
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </Container>
       </Reveal>
 
       <Container>
